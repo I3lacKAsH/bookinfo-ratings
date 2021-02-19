@@ -2,3 +2,5 @@
 
 Hello,
 Rating service has been developed on NodeJS
+
+Bye Khomson
