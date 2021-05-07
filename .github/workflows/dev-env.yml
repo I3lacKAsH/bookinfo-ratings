@@ -46,9 +46,9 @@ jobs:
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
-  healthcheck :
-    needs : deploy
+  acceptance-test: :
+    needs : deploy-prd
     runs-on : ubuntu-20.04
     steps:
-      - name: Curl healthcheck path
+      - name: healthcheck path
         run: curl http://bookinfo.dev.opsta.net/student12/ratings/health | grep "Ratings is working"
